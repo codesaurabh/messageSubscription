@@ -1,0 +1,4 @@
+com\demo\subscription\model\Message.class
+com\demo\subscription\model\MessageType.class
+com\demo\subscription\api\MessagesubscriptionService.class
+com\demo\subscription\model\SubscriptionMessage.class

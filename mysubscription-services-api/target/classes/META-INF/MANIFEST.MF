@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: mysubscription-services-api
+Implementation-Version: 1.0
+Built-By: saurabhc
+Implementation-Vendor-Id: com.demo.subscription
+Build-Jdk: 1.8.0
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
