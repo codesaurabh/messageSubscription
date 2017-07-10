@@ -1,0 +1,36 @@
+Approach to the task assigned
+-----------------------------
+
+1. I have created an interface that contains 4 operations
+a. CreateSubscription
+b. ReadSubscription
+c. UpdateSubscription
+d. PostMessage
+
+CreateSubscription contains  MessageType, which can be a XML message or other format.
+It will be subscribing essentially on some topic that can be "java topic", "SOA topic", "ESB topic", "Microservices topic" etc..
+
+
+There are two implementation  that I have depicted too.
+
+    1. RestFul Call, that can be called from thin (servlets or server side components) or thick clients (node.js,  angular.js, etc, applets)
+    2. Soap Call, Application can also call SOAP call request with messageType as XML and other, that can be implemented.
+    
+    There can be other solutions as well. 
+    JMX and others communication channels can communicate for this operations that can be implemented, for example JMX implementation can also be   
+      incorporated where the TCP protocol is listening.
+    JMS based communication can also be implemented.
+
+Each operation has a handler attached to it that essentially that can be delegated to either threads, or JMS queue/topic or tasks(other web service calls)  that can be created.
+
+
+There can have multiple handlers for events ( like createSubscription and updateSubscriptipon, etc...) that can be started or boot at the start, or it can be upgraded as per the requirement
+
+These handler keeps track of the events, with all the threads.
+
+The information can be persisted to the storage ( database, NOSQL, or other ) as required by these handlers.
+
+Property file can be added, to configure startup handler like 2 handlers for createSubscription, 1 for updateSubscription etc..., start.
+
+
+
